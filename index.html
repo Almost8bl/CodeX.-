@@ -1,300 +1,539 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> هدفنا ارضائك | CodeX </title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>  <html lang="ar" dir="rtl">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>هدفنا ارضائك | CodeX</title>  <script src="https://cdn.tailwindcss.com"></script>  
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'cairo': ['Cairo', 'sans-serif'],
-                    },
-                    colors: {
-                        'light-beige': '#FDFBF5',
-                        'sky-blue': {
-                            'DEFAULT': '#38bdf8', // light sky blue
-                            'dark': '#0ea5e9',   // darker for hover
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* To apply the font globally */
-        body {
-            font-family: 'cairo', sans-serif;
-            background-color: #FDFBF5; /* لون البيج الفاتح */
-            color: #1a1a1a; /* لون النص الأسود */
-            scroll-behavior: smooth;
-        }
-        /* A subtle background pattern for a richer feel */
-        .hero-section {
-            background-color: #FDFBF5;
-            background-image:
-                radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.04) 1px, transparent 0);
-            background-size: 20px 20px;
-        }
-
-        /* مؤثر تحميل ناعم */
-        @keyframes fade-in-down {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in-down {
-            animation: fade-in-down 0.6s ease-out both;
-        }
-    </style>
-</head>
-<body class="antialiased">
-
-    <header class="bg-light-beige/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300 ease-in-out" id="main-header">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center animate-fade-in-down">
-            <a href="index.html" class="relative text-2xl font-bold text-gray-800 transition-transform duration-300 hover:scale-105 group">
-                Codex
-                <span class="absolute -bottom-1 left-0 w-0 h-1 bg-sky-400 group-hover:w-full transition-all duration-500 rounded-full"></span>
-            </a>
-
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse">
-                <a href="#home" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">الرئيسية</a>
-                <a href="shop.html" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">منتجاتنا</a>
-                <a href="about.html" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">من نحن</a>
-                <a href="contact.html" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">تواصل معنا</a>
-            </nav>
-
-            <a href="support.html" class="hidden md:block bg-sky-blue text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-sky-blue-dark transition-all duration-300 hover:scale-105 hover:shadow-lg hover:animate-pulse">
-                الدعم الفني
-            </a>
-
-            <button class="md:hidden text-gray-700 focus:outline-none transition-transform duration-300 hover:rotate-90">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </div>
-    </header>
-
-    <main id="home" class="hero-section text-center py-32 bg-gradient-to-br from-white via-sky-50 to-white relative overflow-hidden">
-        <div class="absolute -top-10 left-10 w-48 h-48 bg-sky-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-        <div class="absolute bottom-0 right-0 w-72 h-72 bg-sky-200 rounded-full blur-2xl opacity-40 animate-pulse"></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-<h1 class="text-3xl md:text-4xl font-extrabold text-sky-600 tracking-widest uppercase drop-shadow-sm mb-6">
-    CodeX <span class="block text-base md:text-lg font-semibold text-gray-500 tracking-normal mt-1">Dev Easy</span>
-</h1>
+<link rel="preconnect" href="https://fonts.googleapis.com">  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">  
+  
+<script src="https://unpkg.com/lucide-icons"></script>  
 
 
+<script>  
+    tailwind.config = {  
+        theme: {  
+            extend: {  
+                fontFamily: {  
+                    'cairo': ['Cairo', 'sans-serif'],  
+                    'tajawal': ['Tajawal', 'sans-serif'],  
+                },  
+                colors: {  
+                    'light-beige': '#FDFBF5',  
+                    'sky-blue': {  
+                        'DEFAULT': '#38bdf8',  
+                        'dark': '#0ea5e9',  
+                    },  
+                    'royal-red': '#C0392B',  
+                    'crimson-dark': '#A30000', // Deep Crimson / Dark Cherry  
+                    'ivory': '#FFFFF0',  
+                    'gold-light': '#FDE047',  
+                    'gold-dark': '#D97706',  
+                    'dark-charcoal': '#1A1A1A',  
+                    'silver-light': '#E0E0E0',  
+                    'silver-dark': '#B0B0B0',  
+                },  
+                animation: {  
+                    'fade-in-down': 'fade-in-down 0.6s ease-out both',  
+                    'marquee-rtl': 'marquee-rtl 15s linear infinite paused', // Paused by default  
+                    'pulse-keyword': 'pulse-keyword 2s infinite ease-in-out',  
+                    'shake-heavy': 'shake-heavy 0.8s cubic-bezier(.36,.07,.19,.97) both',  
+                    'slide-up-fade': 'slide-up-fade 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards',  
+                },  
+                keyframes: {  
+                    'fade-in-down': {  
+                        '0%': { opacity: '0', transform: 'translateY(-20px)' },  
+                        '100%': { opacity: '1', transform: 'translateY(0)' },  
+                    },  
+                    'marquee-rtl': {  
+                        '0%': { transform: 'translateX(50%)' },  
+                        '100%': { transform: 'translateX(-50%)' },  
+                    },  
+                    'pulse-keyword': {  
+                        '0%, 100%': { opacity: '1', transform: 'scale(1)' },  
+                        '50%': { opacity: '0.85', transform: 'scale(1.15)' },  
+                    },  
+                    'shake-heavy': {  
+                        '10%, 90%': { transform: 'translate3d(-2px, 0, 0) rotate(-2deg)' },  
+                        '20%, 80%': { transform: 'translate3d(3px, 0, 0) rotate(2deg)' },  
+                        '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0) rotate(-2deg)' },  
+                        '40%, 60%': { transform: 'translate3d(4px, 0, 0) rotate(2deg)' },  
+                    },  
+                    'slide-up-fade': {  
+                        'from': { opacity: '0', transform: 'translateY(60px)' },  
+                        'to': { opacity: '1', transform: 'translateY(0)' },  
+                    },  
+                }  
+            }  
+        }  
+    }  
+</script>  
+<style>  
+    body {  
+        font-family: 'cairo', sans-serif;  
+        background-color: #FDFBF5;  
+        color: #1a1a1a;  
+        scroll-behavior: smooth;  
+    }  
+    .hero-section {  
+        background-color: #FDFBF5;  
+        background-image:  
+            radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.04) 1px, transparent 0);  
+        background-size: 20px 20px;  
+    }  
 
-<section class="text-center px-4 md:px-8 lg:px-16 py-12 bg-white">
-  <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight drop-shadow-sm mb-6">
-    هدفنا أن نُرضيك في كل تفصيلة من مشروعك
-  </h2>
+    /* --- New News Section Styles --- */  
+    .custom-title-shadow {  
+        text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6), 0px 0px 2px rgba(220, 20, 60, 0.9);  
+    }  
 
-  <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10">
-    في <span class="font-semibold text-blue-700">Codex</span> ، نرى أن البرمجة ليست مجرد كود بل فن. نحن نبتكر أنظمة ذكية، مرنة، وسهلة الاستخدام تُترجم أفكارك إلى واقع مبهر.
-  </p>
+    .section-entry {  
+        opacity: 0;  
+    }  
+    .section-entry.is-visible {  
+        animation: slide-up-fade 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;  
+    }  
+    .section-entry.is-visible .animate-on-scroll {  
+        animation-play-state: running;  
+    }  
+
+    .marquee-content {  
+        display: flex;  
+        align-items: center;  
+    }  
+</style>
+
+</head>  
+<body class="antialiased">  <header class="bg-light-beige/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300 ease-in-out" id="main-header">  
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center animate-fade-in-down">  
+        <a href="index.html" class="relative text-2xl font-bold text-gray-800 transition-transform duration-300 hover:scale-105 group">  
+            Codex  
+            <span class="absolute -bottom-1 left-0 w-0 h-1 bg-sky-400 group-hover:w-full transition-all duration-500 rounded-full"></span>  
+        </a>  
+        <nav class="hidden md:flex items-center space-x-8 space-x-reverse">  
+            <a href="#home" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">الرئيسية</a>  
+            <a href="shop.html" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">منتجاتنا</a>  
+            <a href="about.html" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">من نحن</a>  
+            <a href="contact.html" class="text-gray-600 hover:text-sky-blue transition relative hover:after:w-full after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-sky-blue after:transition-all after:duration-500">تواصل معنا</a>  
+        </nav>  
+        <a href="support.html" class="hidden md:block bg-sky-blue text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-sky-blue-dark transition-all duration-300 hover:scale-105 hover:shadow-lg hover:animate-pulse">  
+            الدعم الفني  
+        </a>  
+        <button class="md:hidden text-gray-700 focus:outline-none transition-transform duration-300 hover:rotate-90">  
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />  
+            </svg>  
+        </button>  
+    </div>  
+</header>  
+
+<main id="home" class="hero-section text-center py-32 bg-gradient-to-br from-white via-sky-50 to-white relative overflow-hidden">  
+    <div class="absolute -top-10 left-10 w-48 h-48 bg-sky-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>  
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-sky-200 rounded-full blur-2xl opacity-40 animate-pulse"></div>  
+    <div class="container mx-auto px-6 relative z-10">  
+        <h1 class="text-3xl md:text-4xl font-extrabold text-sky-600 tracking-widest uppercase drop-shadow-sm mb-6">  
+            CodeX <span class="block text-base md:text-lg font-semibold text-gray-500 tracking-normal mt-1">Dev Easy</span>  
+        </h1>  
+        <section class="text-center px-4 md:px-8 lg:px-16 py-12 bg-white">  
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight drop-shadow-sm mb-6">  
+                هدفنا أن نُرضيك في كل تفصيلة من مشروعك  
+            </h2>  
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10">  
+                في <span class="font-semibold text-blue-700">Codex</span> ، نرى أن البرمجة ليست مجرد كود بل فن. نحن نبتكر أنظمة ذكية، مرنة، وسهلة الاستخدام تُترجم أفكارك إلى واقع مبهر.  
+            </p>  
+        </section>  
+        <a href="#contact" class="inline-block bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-lg py-3 px-10 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">  
+            تواصل معنا  
+        </a>  
+    </div>  
+</main>  
+
+<div class="container mx-auto px-6 -mt-16 mb-20">  
+    <div class="relative rounded-2xl shadow-2xl overflow-hidden h-64 md:h-96 bg-gray-800">  
+        <img src="logo1.png" alt="صورة كود برمجي" class="w-full h-full object-cover opacity-30">  
+        <div class="absolute inset-0 flex items-center justify-center">  
+            <svg class="w-24 h-24 text-sky-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>  
+        </div>  
+    </div>  
+</div>  
+
+
+<section id="services" class="py-20 bg-white">  
+    <div class="container mx-auto px-6">  
+        <div class="text-center mb-16">  
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">جرب أفضل الخدمات التي نقدمها</h2>  
+            <div class="w-24 h-1 bg-sky-blue mx-auto mt-4 rounded"></div>  
+        </div>  
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">  
+            <div class="bg-light-beige p-8 rounded-xl shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">  
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">بوتات ديسكورد معقدة</h3>  
+                <p class="text-gray-600 leading-relaxed">نقوم ببرمجة بوتات مبهرة تخدم سيرفرك بكل احترافية، وتؤدي المهام التي تطلبها بدقة وكفاءة.</p>  
+            </div>  
+            <div class="bg-light-beige p-8 rounded-xl shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">  
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">مواقع ويب تفاعلية</h3>  
+                <p class="text-gray-600 leading-relaxed">نصمم مواقع سريعة وآمنة تخدم جمهورك، بتصميم جذاب ومتجاوب مع جميع الأجهزة مع خدمة عملاء طوال الساعه لتحديث وضبط اي شئ تريده .</p>  
+            </div>  
+            <div class="bg-light-beige p-8 rounded-xl shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">  
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">تكامل مع واجهات API</h3>  
+                <p class="text-gray-600 leading-relaxed">ربط احترافي بين تطبيقاتك والخدمات الخارجية من خلال واجهات برمجية قوية ومستقرة بأحدث الانظمة التقنية.</p>  
+            </div>  
+        </div>  
+    </div>  
+</section>  
+
+<section id="testimonial" class="py-24 bg-gray-900 text-white">  
+    <div class="container mx-auto px-6 text-center">  
+        <div class="max-w-3xl mx-auto bg-gray-800 rounded-xl shadow-lg p-10">  
+            <div class="flex flex-col items-center gap-4">  
+                <img class="w-20 h-20 rounded-full border-4 border-sky-500 shadow-md" src="https://i.pravatar.cc/100?img=12" alt="عميل Codex">  
+                <svg class="w-10 h-10 text-sky-400 opacity-50" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">  
+                    <path d="M9.333 8c-1.54 0-2.893 0.427-4.12 1.28-1.227 0.853-2.147 2.040-2.76 3.56-0.613 1.52-0.92 3.307-0.92 5.36s0.307 3.84 0.92 5.36c0.613 1.52 1.533 2.707 2.76 3.56s2.58 1.28 4.12 1.28c1.827 0 3.427-0.653 4.8-1.96l-2.027-3.053c-0.747 0.613-1.573 0.92-2.48 0.92-0.813 0-1.48-0.293-2-0.88s-0.78-1.32-0.78-2.2c0-0.973 0.32-1.853 0.96-2.64s1.547-1.187 2.72-1.187h2.133v-6.4h-4.267zM25.333 8c-1.54 0-2.893 0.427-4.12 1.28-1.227 0.853-2.147 2.040-2.76 3.56-0.613 1.52-0.92 3.307-0.92 5.36s0.307 3.84 0.92 5.36c0.613 1.52 1.533 2.707 2.76 3.56s2.58 1.28 4.12 1.28c1.827 0 3.427-0.653 4.8-1.96l-2.027-3.053c-0.747 0.613-1.573 0.92-2.48 0.92-0.813 0-1.48-0.293-2-0.88s-0.78-1.32-0.78-2.2c0-0.973 0.32-1.853 0.96-2.64s1.547-1.187 2.72-1.187h2.133v-6.4h-4.267z"></path>  
+                </svg>  
+                <p class="text-xl md:text-2xl font-semibold leading-relaxed text-gray-100">  
+                    "تعامل ممتاز خدمة علي مدار الساعة و تجاوب و اسلوب راق جدا ."  
+                </p>  
+                <cite class="block mt-4 text-sm font-medium text-sky-400">  
+                    - يزن البخيت - فاوندر مجموعة سيرفرات ULG .  
+                </cite>  
+            </div>  
+        </div>  
+    </div>  
 </section>
 
+<section id="codex-news" dir="rtl" class="relative w-full overflow-hidden bg-gradient-to-br from-[#7b0000] via-[#400000] to-black py-24 md:py-32">  
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>  <div class="relative z-10 container mx-auto px-6 text-center flex flex-col items-center gap-10 md:gap-14">
 
-            <a href="#contact"
-               class="inline-block bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-lg py-3 px-10 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
-                تواصل معنا
-            </a>
-        </div>
-    </main>
+<div>  
+    <h2 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-md leading-none font-serif">  
+        CODE<span style="color: #8B0000;">X</span>  
+    </h2>  
+    <p class="text-4xl md:text-5xl font-semibold text-white drop-shadow-md mt-2 font-sans">  
+        NEWS  
+    </p>  
+</div>  <div id="breaking-news-container" class="w-full max-w-5xl mx-auto my-12 opacity-0 translate-y-12 transition-all duration-1000 ease-in-out" dir="rtl">  <div class="flex items-stretch bg-gradient-to-t from-red-900 to-red-800 rounded-lg shadow-2xl shadow-red-900/50 ring-2 ring-red-500/50 overflow-hidden">  
+      
+    <div class="flex-shrink-0 bg-[#7b0000] text-amber-300 flex items-center justify-center px-5 sm:px-6 shadow-lg relative z-10">  
+        <span class="text-xl sm:text-2xl font-extrabold tracking-wider">عاجل</span>  
+        <div class="absolute -left-4 top-0 bottom-0 w-8 bg-amber-400 transform skew-x-12"></div>  
+    </div>  
 
-    <div class="container mx-auto px-6 -mt-16 mb-20">
-        <div class="relative rounded-2xl shadow-2xl overflow-hidden h-64 md:h-96 bg-gray-800">
-            <img src="logo1.png" alt="صورة كود برمجي" class="w-full h-full object-cover opacity-30">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <svg class="w-24 h-24 text-sky-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-            </div>
-        </div>
-    </div>
+    <div class="flex-grow flex items-center overflow-hidden relative pr-4">  
+        <p class="text-white text-lg sm:text-xl font-bold tracking-wide whitespace-nowrap animate-scroll-and-pause">
+
+شركة كوديكس تفتح باب التقديم للفرق التقنية
+</p>
+</div>
+
+</div>
+
+</div>  <style>  
+    /* تعريف حركة الماركيه المخصصة:  
+    - تبدأ من خارج الشاشة يسارًا (translateX(-100%)).  
+    - تتحرك إلى خارج الشاشة يمينًا (translateX(100%)) خلال 90% من وقت الأنيميشن.  
+    - تبقى في مكانها النهائي لمدة 10% من الوقت (تأثير التوقف) قبل أن تعيد الكرة.  
+    */  
+    @keyframes scroll-and-pause {  
+        0% {  
+            transform: translateX(-100%);  
+        }  
+        90% {  
+            transform: translateX(100%);  
+        }  
+        100% {  
+            transform: translateX(100%);  
+        }  
+    }  
+  
+    /* تطبيق الأنيميشن على الصنف المخصص */  
+    .animate-scroll-and-pause {  
+        /* سيتم وضع النص في بداية الحاوية وسيكون جاهزًا للتحرك */  
+        display: inline-block;  
+        padding-left: 100%; /* يبدأ النص من خارج الحاوية تمامًا من اليسار */  
+        animation: scroll-and-pause 15s linear infinite;  
+    }  
+  
+    /* صنف المساعدة الذي سيضيفه JavaScript لتفعيل أنيميشن الدخول */  
+    #breaking-news-container.is-visible {  
+        opacity: 1;  
+        transform: translateY(0);  
+    }  
+</style>  <script>  
+    document.addEventListener('DOMContentLoaded', () => {  
+        // استهداف الحاوية الرئيسية للشريط الإخباري  
+        const newsBannerContainer = document.getElementById('breaking-news-container');  
+  
+        // التأكد من وجود العنصر قبل إنشاء المراقب  
+        if (newsBannerContainer) {  
+            const observer = new IntersectionObserver((entries) => {  
+                // entries[0] هو العنصر الذي نراقبه  
+                if (entries[0].isIntersecting) {  
+                    // عندما يصبح العنصر مرئيًا في الشاشة، أضف الصنف is-visible  
+                    newsBannerContainer.classList.add('is-visible');  
+                      
+                    // أوقف المراقبة بعد تفعيل الحركة مرة واحدة لتحسين الأداء  
+                    observer.unobserve(newsBannerContainer);  
+                }  
+            }, {  
+                // ابدأ الأنيميشن عندما يظهر 30% من العنصر على الشاشة  
+                threshold: 0.3   
+            });  
+  
+            // بدء مراقبة الحاوية  
+            observer.observe(newsBannerContainer);  
+        }  
+    });  
+</script>  <div class="absolute bottom-0 right-0 w-72 h-72 bg-sky-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse"></div>  
 
 
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">جرب أفضل الخدمات التي نقدمها</h2>
-                <div class="w-24 h-1 bg-sky-blue mx-auto mt-4 rounded"></div>
-            </div>
+<div class="w-screen max-w-full overflow-hidden">  
+    <div class="flex whitespace-nowrap py-4 px-6 bg-[#4b0000]/80 border-y border-red-600 shadow-inner">  
+        <div class="flex animate-marquee rtl:animate-marquee-rtl">  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🚀 إطلاق React 19 مع تحسينات في Concurrent Rendering ودعم Server Actions رسميًا  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🔐 GitHub تُفعّل 2FA إجباريًا لجميع المطورين للمساهمة في تعزيز أمن الكود  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🧠 Python 3.13 يدخل البيتا بميزات مثل دعم JIT و Garbage Collection أسرع  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                ⚙️ Node.js 22 يُصدر بدعم كامل لـ Fetch API وتحسين الأداء العام  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                💡 OpenAI تُحدّث GPT-4.5 بقدرات فهم السياق الطويل وتحليل الصور البرمجية  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                📦 Bun 1.2 يتفوّق على Node.js في سرعة التشغيل وبناء المشاريع الضخمة  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🌐 Deno تعلن عن دعم NPM الكامل ومزايا جديدة للأمان في المشاريع الكبيرة  
+            </span>  
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-light-beige p-8 rounded-xl shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">بوتات ديسكورد معقدة</h3>
-                    <p class="text-gray-600 leading-relaxed">نقوم ببرمجة بوتات مبهرة تخدم سيرفرك بكل احترافية، وتؤدي المهام التي تطلبها بدقة وكفاءة.</p>
-                </div>
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🚀 إطلاق React 19 مع تحسينات في Concurrent Rendering ودعم Server Actions رسميًا  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🔐 GitHub تُفعّل 2FA إجباريًا لجميع المطورين للمساهمة في تعزيز أمن الكود  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🧠 Python 3.13 يدخل البيتا بميزات مثل دعم JIT و Garbage Collection أسرع  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                ⚙️ Node.js 22 يُصدر بدعم كامل لـ Fetch API وتحسين الأداء العام  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                💡 OpenAI تُحدّث GPT-4.5 بقدرات فهم السياق الطويل وتحليل الصور البرمجية  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                📦 Bun 1.2 يتفوّق على Node.js في سرعة التشغيل وبناء المشاريع الضخمة  
+            </span>  
+            <span class="text-lg md:text-xl text-amber-100 font-medium mx-8">  
+                🌐 Deno تعلن عن دعم NPM الكامل ومزايا جديدة للأمان في المشاريع الكبيرة  
+            </span>  
+        </div>  
+    </div>  
+</div>  
 
-                <div class="bg-light-beige p-8 rounded-xl shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">مواقع ويب تفاعلية</h3>
-                    <p class="text-gray-600 leading-relaxed">نصمم مواقع سريعة وآمنة تخدم جمهورك، بتصميم جذاب ومتجاوب مع جميع الأجهزة مع خدمة عملاء طوال الساعه لتحديث وضبط اي شئ تريده .</p>
-                </div>
-
-                <div class="bg-light-beige p-8 rounded-xl shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">تكامل مع واجهات API</h3>
-                    <p class="text-gray-600 leading-relaxed">ربط احترافي بين تطبيقاتك والخدمات الخارجية من خلال واجهات برمجية قوية ومستقرة بأحدث الانظمة التقنية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonial" class="py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <div class="max-w-3xl mx-auto bg-gray-800 rounded-xl shadow-lg p-10">
-                <div class="flex flex-col items-center gap-4">
-                    <img class="w-20 h-20 rounded-full border-4 border-sky-500 shadow-md" src="https://i.pravatar.cc/100?img=12" alt="عميل Codex">
-
-                    <svg class="w-10 h-10 text-sky-400 opacity-50" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                        <path d="M9.333 8c-1.54 0-2.893 0.427-4.12 1.28-1.227 0.853-2.147 2.040-2.76 3.56-0.613 1.52-0.92 3.307-0.92 5.36s0.307 3.84 0.92 5.36c0.613 1.52 1.533 2.707 2.76 3.56s2.58 1.28 4.12 1.28c1.827 0 3.427-0.653 4.8-1.96l-2.027-3.053c-0.747 0.613-1.573 0.92-2.48 0.92-0.813 0-1.48-0.293-2-0.88s-0.78-1.32-0.78-2.2c0-0.973 0.32-1.853 0.96-2.64s1.547-1.187 2.72-1.187h2.133v-6.4h-4.267zM25.333 8c-1.54 0-2.893 0.427-4.12 1.28-1.227 0.853-2.147 2.040-2.76 3.56-0.613 1.52-0.92 3.307-0.92 5.36s0.307 3.84 0.92 5.36c0.613 1.52 1.533 2.707 2.76 3.56s2.58 1.28 4.12 1.28c1.827 0 3.427-0.653 4.8-1.96l-2.027-3.053c-0.747 0.613-1.573 0.92-2.48 0.92-0.813 0-1.48-0.293-2-0.88s-0.78-1.32-0.78-2.2c0-0.973 0.32-1.853 0.96-2.64s1.547-1.187 2.72-1.187h2.133v-6.4h-4.267z"></path>
-                    </svg>
-
-                    <p class="text-xl md:text-2xl font-semibold leading-relaxed text-gray-100">
-                        "تعامل ممتاز خدمة علي مدار الساعة و تجاوب و اسلوب راق جدا ."
-                    </p>
-
-                    <cite class="block mt-4 text-sm font-medium text-sky-400">
-                        - يزن البخيت - فاوندر مجموعة سيرفرات ULG . 
-                    </cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" dir="rtl" class="py-28 bg-gradient-to-br from-[#f0f4f8] to-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-        <div class="absolute bottom-0 right-0 w-72 h-72 bg-sky-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse"></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-                    هل أنت مستعد لإطلاق مشروعك؟
-                </h2>
-                <p class="text-lg text-gray-600 mb-10 leading-relaxed">
-                    دعنا نحول فكرتك إلى منتج حقيقي. في Codex، نملك الأدوات والعقول لجعل رؤيتك واقعًا تقنيًا مبهرًا.
-                </p>
-
-                <a href="contact.html"
-                   class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-sky-500 hover:bg-sky-600 text-white text-lg font-semibold rounded-full shadow-xl transition-all duration-300 hover:shadow-sky-400/40 hover:scale-105">
-                    <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0l4-4m-4 4l4 4" />
-                    </svg>
-                    ابدأ المراسلة الآن
-                </a>
-
-                <p class="text-sm text-gray-500 mt-6">
-                    راسلنا عبر البريد: <span class="text-sky-600 font-medium">support@codexzone.com</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-950 text-white border-t border-gray-800">
-        <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-right">
-            
-            <div class="text-sm text-gray-400">
-                نحن في <span class="font-semibold text-white">Codex</span> نؤمن بأن التقنية يجب أن تكون بسيطة ومبهرة في آنٍ واحد.
-            </div>
-
-            <div class="flex justify-center md:justify-center space-x-6 rtl:space-x-reverse">
-<a href="https://www.youtube.com/@CodeX-dev-eazy" class="hover:text-red-600 transition" aria-label="YouTube" target="_blank">
-    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-        <path d="M23.498 6.186a2.93 2.93 0 0 0-2.057-2.066C19.57 3.5 12 3.5 12 3.5s-7.57 0-9.441.62A2.93 2.93 0 0 0 .502 6.186C0 8.066 0 12 0 12s0 3.934.502 5.814a2.93 2.93 0 0 0 2.057 2.066C4.43 20.5 12 20.5 12 20.5s7.57 0 9.441-.62a2.93 2.93 0 0 0 2.057-2.066C24 15.934 24 12 24 12s0-3.934-.502-5.814zM9.75 15.018V8.982L15.545 12 9.75 15.018z"/>
-    </svg>
+<a href="https://almost8bl.github.io/CodeX-News/" target="_blank" class="group relative inline-block rounded-full bg-gradient-to-r from-red-700 to-red-900 p-[2px] hover:scale-105 transition-transform duration-300 shadow-lg mt-4">  
+    <div class="flex items-center gap-3 px-8 sm:px-10 py-4 bg-black rounded-full text-white text-xl font-bold">  
+        <span>اكتشف كل جديد </span>  
+    </div>  
+    <div class="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent transform skew-x-[-30deg] group-hover:left-full transition-all duration-1000"></div>  
 </a>
 
-<a href="https://discord.gg/QQAEpsnKZF" class="hover:text-indigo-500 transition" aria-label="Discord" target="_blank">
-    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-        <path d="M20.317 4.369a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.078.037c-.211.375-.444.864-.608 1.249a18.365 18.365 0 00-5.493 0 12.06 12.06 0 00-.617-1.249.077.077 0 00-.078-.037 19.736 19.736 0 00-4.885 1.515.07.07 0 00-.033.027C.533 9.045-.32 13.579.099 18.057a.082.082 0 00.031.056 19.9 19.9 0 005.993 3.058.077.077 0 00.084-.027c.46-.63.873-1.295 1.226-1.989a.076.076 0 00-.041-.106 13.276 13.276 0 01-1.886-.902.077.077 0 01-.008-.127c.126-.094.252-.192.374-.291a.074.074 0 01.077-.01c3.928 1.795 8.18 1.795 12.061 0a.073.073 0 01.078.009c.123.099.248.198.375.292a.076.076 0 01-.006.127 12.387 12.387 0 01-1.887.901.076.076 0 00-.04.107c.36.693.773 1.358 1.225 1.988a.075.075 0 00.084.028 19.87 19.87 0 006.002-3.057.078.078 0 00.03-.057c.5-5.177-.838-9.673-3.548-13.66a.062.062 0 00-.03-.027zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.175 1.094 2.157 2.418 0 1.334-.955 2.419-2.157 2.419zm7.974 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.175 1.094 2.157 2.418 0 1.334-.947 2.419-2.157 2.419z"/>
-    </svg>
-</a>
+</div>  <style>  
+    /* حركة الماركيه من اليمين إلى اليسار (افتراضي) */  
+    @keyframes marquee {  
+        0% { transform: translateX(0%); }  
+        100% { transform: translateX(-50%); } /* يتحرك بنسبة 50% من عرضه الكلي (المحتوى المكرر) */  
+    }  
+    .animate-marquee {  
+        animation: marquee 30s linear infinite;  
+    }  
+  
+    /* حركة الماركيه من اليسار إلى اليمين (للاتجاه RTL) */  
+    @keyframes marquee-rtl {  
+        0% { transform: translateX(0%); }  
+        100% { transform: translateX(50%); } /* يتحرك بنسبة 50% من عرضه الكلي (المحتوى المكرر) */  
+    }  
+    .rtl\:animate-marquee-rtl {  
+        animation: marquee-rtl 30s linear infinite;  
+    }  
+  
+    /* صنف جديد للتحكم بظهور شريط الأخبار العاجلة */  
+    #breaking-news-banner.is-visible {  
+        opacity: 1;  
+        transform: translateY(0);  
+    }  
+</style>  <script>  
+    document.addEventListener('DOMContentLoaded', function() {  
+      // Note: The ID 'breaking-news-banner' was not found in the HTML provided for this specific script.  
+      // The breaking news container is using 'breaking-news-container'.  
+      // I'm assuming 'breaking-news-banner' was intended for another element or a typo.  
+      // I'm leaving it as is, assuming it might be for a future feature or an external element.  
+      const banner = document.getElementById('breaking-news-banner');   
+      const sectionToObserve = document.getElementById('codex-news');  
+  
+      if (banner && sectionToObserve) { // Only run if both elements exist  
+        const observer = new IntersectionObserver((entries) => {  
+          if (entries[0].isIntersecting) {  
+            setTimeout(() => {  
+              banner.classList.add('is-visible');  
+            }, 3000);   
+            observer.unobserve(sectionToObserve);  
+          }  
+        }, {  
+          threshold: 0.1   
+        });  
+        observer.observe(sectionToObserve);  
+      }  
+    });  
+</script>  </section>  <section id="contact" dir="rtl" class="py-28 bg-gradient-to-br from-[#f0f4f8] to-white relative overflow-hidden">  
+    <div class="absolute top-0 left-0 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>  
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-sky-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse"></div>  
+    <div class="container mx-auto px-6 relative z-10">  
+        <div class="max-w-3xl mx-auto text-center">  
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">  
+                هل أنت مستعد لإطلاق مشروعك؟  
+            </h2>  
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed">  
+                دعنا نحول فكرتك إلى منتج حقيقي. في Codex، نملك الأدوات والعقول لجعل رؤيتك واقعًا تقنيًا مبهرًا.  
+            </p>  
+            <a href="contact.html" class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-sky-500 hover:bg-sky-600 text-white text-lg font-semibold rounded-full shadow-xl transition-all duration-300 hover:shadow-sky-400/40 hover:scale-105">  
+                <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">  
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0l4-4m-4 4l4 4" />  
+                </svg>  
+                ابدا المراسلة الآن  
+            </a>  
+            <p class="text-sm text-gray-500 mt-6">  
+                راسلنا عبر البريد: <span class="text-sky-600 font-medium">support@codexzone.com</span>  
+            </p>  
+        </div>  
+    </div>  
+</section>  
 
+<footer class="bg-gray-950 text-white border-t border-gray-800">  
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-right">  
+        <div class="text-sm text-gray-400">  
+            نحن في <span class="font-semibold text-white">Codex</span> نؤمن بأن التقنية يجب أن تكون بسيطة ومبهرة في آنٍ واحد.  
+        </div>  
+        <div class="flex justify-center md:justify-center space-x-6 rtl:space-x-reverse">  
+            <a href="https://www.youtube.com/@CodeX-dev-eazy" class="hover:text-red-600 transition" aria-label="YouTube" target="_blank">  
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a2.93 2.93 0 0 0-2.057-2.066C19.57 3.5 12 3.5 12 3.5s-7.57 0-9.441.62A2.93 2.93 0 0 0 .502 6.186C0 8.066 0 12 0 12s0 3.934.502 5.814a2.93 2.93 0 0 0 2.057 2.066C4.43 20.5 12 20.5 12 20.5s7.57 0 9.441-.62a2.93 2.93 0 0 0 2.057-2.066C24 15.934 24 12 24 12s0-3.934-.502-5.814zM9.75 15.018V8.982L15.545 12 9.75 15.018z"/></svg>  
+            </a>  
+            <a href="" class="hover:text-indigo-500 transition" aria-label="Discord" target="_blank">  
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.369a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.078.037c-.211.375-.444.864-.608 1.249a18.365 18.365 0 00-5.493 0 12.06 12.06 0 00-.617-1.249.077.077 0 00-.078-.037 19.736 19.736 0 00-4.885 1.515.07.07 0 00-.033.027C.533 9.045-.32 13.579.099 18.057a.082.082 0 00.031.056 19.9 19.9 0 005.993 3.058.077.077 0 00.084-.027c.46-.63.873-1.295 1.226-1.989a.076.076 0 00-.041-.106 13.276 13.276 0 01-1.886-.902.077.077 0 01-.008-.127c.126-.094.252-.192.374-.291a.074.074 0 01.077-.01c3.928 1.795 8.18 1.795 12.061 0a.073.073 0 01.078.009c.123.099.248.198.375.292a.076.076 0 01-.006.127 12.387 12.387 0 01-1.887.901.076.076 0 00-.04.107c.36.693.773 1.358 1.225 1.988a.075.075 0 00.084.028 19.87 19.87 0 006.002-3.057.078.078 0 00.03-.057c.5-5.177-.838-9.673-3.548-13.66a.062.062 0 00-.03-.027zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.175 1.094 2.157 2.418 0 1.334-.955 2.419-2.157 2.419zm7.974 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.175 1.094 2.157 2.418 0 1.334-.947 2.419-2.157 2.419z"/></svg>  
+            </a>  
+            <a href="https://x.com/CodeXdeveazy" class="text-white hover:text-gray-300 transition" aria-label="X" target="_blank">  
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M21.543 3H17.7l-5.3 6.867L6.257 3H2l7.617 10.066L2 21h3.843l5.57-7.207L17.7 21H22l-7.905-10.34L21.543 3z"/></svg>  
+            </a>  
+        </div>  
+        <div class="text-sm text-gray-500">  
+            جميع الحقوق محفوظة © Codex 2025  
+        </div>  
+    </div>  
+</footer>
 
-
-<a href="https://x.com/CodeXdeveazy" class="text-white hover:text-gray-300 transition" aria-label="X" target="_blank">
-    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-        <path d="M21.543 3H17.7l-5.3 6.867L6.257 3H2l7.617 10.066L2 21h3.843l5.57-7.207L17.7 21H22l-7.905-10.34L21.543 3z"/>
-    </svg>
-</a>
-
-
-
-
-            </div>
-
-            <div class="text-sm text-gray-500">
-                جميع الحقوق محفوظة © Codex 2025
-            </div>
-
-        </div>
-    </footer>
-
-
-</body>
-
-<script>
-    // إضافة ظل عند التمرير
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('main-header');
-        if (window.scrollY > 10) {
-            header.classList.add('shadow-lg');
-        } else {
-            header.classList.remove('shadow-lg');
-        }
-    });
-
-    // منع كليك يمين
-    document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // منع اختصارات فحص العنصر
-    document.addEventListener('keydown', function(e) {
-        if (
-            e.key === 'F12' ||             // F12
-            (e.ctrlKey && e.shiftKey && e.key === 'I') || // Ctrl+Shift+I
-            (e.ctrlKey && e.shiftKey && e.key === 'C') || // Ctrl+Shift+C
-            (e.ctrlKey && e.shiftKey && e.key === 'J') || // Ctrl+Shift+J
-            (e.ctrlKey && e.key === 'U')          // Ctrl+U (عرض الكود)
-        ) {
-            e.preventDefault();
-        }
-    });
-
-    // تعطيل السحب أو التحديد
-    document.addEventListener('selectstart', e => e.preventDefault());
-    document.addEventListener('dragstart', e => e.preventDefault());
-
-    // تعطيل console.log والتفتيش من الكونسول
-    (function() {
-        const blocked = ['log', 'warn', 'debug', 'info', 'error'];
-        blocked.forEach(method => {
-            console[method] = function() {};
-        });
-    })();
-
-    // محاولة منع فتح أدوات المطور
-    setInterval(() => {
-        const before = new Date();
-        debugger;
-        const after = new Date();
-        if (after - before > 100) {
-            window.location.href = "about:blank";
-        }
-    }, 1000);
-</script>
-
-</html>
+<script>  
+    lucide.createIcons();  
+  
+    // --- Animation & Interaction Script ---  
+    document.addEventListener('DOMContentLoaded', () => {  
+        // Intersection Observer for scroll animations  
+        const observer = new IntersectionObserver((entries) => {  
+            entries.forEach(entry => {  
+                if (entry.isIntersecting) {  
+                    entry.target.classList.add('is-visible');  
+                    // Optional: unobserve after animation  
+                    // observer.unobserve(entry.target);   
+                }  
+            });  
+        }, {  
+            threshold: 0.2 // Trigger when 20% of the element is in view  
+        });  
+  
+        // Observe all elements that need to be animated  
+        document.querySelectorAll('.section-entry').forEach((el) => {  
+            observer.observe(el);  
+        });  
+          
+        // Parallax effect for the news background  
+        const newsBg = document.getElementById('news-background'); // This ID is not present in the HTML  
+        const newsSection = document.getElementById('codex-news');  
+        window.addEventListener('scroll', () => {  
+            if (newsBg && window.innerWidth > 768) { // Run only on larger screens  
+                const scrollY = window.scrollY;  
+                const sectionTop = newsSection.offsetTop;  
+                const sectionHeight = newsSection.offsetHeight;  
+                  
+                // Check if the section is in the viewport  
+                if (scrollY > sectionTop - window.innerHeight && scrollY < sectionTop + sectionHeight) {  
+                    const parallaxValue = (scrollY - sectionTop) * 0.15; // Adjust speed  
+                    newsBg.style.transform = `translateY(${parallaxValue}px)`;  
+                }  
+            }  
+        });  
+    });  
+  
+    // Add shadow to header on scroll  
+    window.addEventListener('scroll', () => {  
+        const header = document.getElementById('main-header');  
+        if (window.scrollY > 10) {  
+            header.classList.add('shadow-lg');  
+        } else {  
+            header.classList.remove('shadow-lg');  
+        }  
+    });  
+  
+    // --- Security Scripts ---  
+    document.addEventListener('contextmenu', e => e.preventDefault());  
+    document.addEventListener('keydown', function(e) {  
+        if (  
+            e.key === 'F12' ||  
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||  
+            (e.ctrlKey && e.key === 'U')  
+        ) {  
+            e.preventDefault();  
+        }  
+    });  
+    document.addEventListener('selectstart', e => e.preventDefault());  
+    document.addEventListener('dragstart', e => e.preventDefault());  
+  
+    // Basic console protection  
+    (function() {  
+        const blocked = ['log', 'warn', 'debug', 'info', 'error'];  
+        blocked.forEach(method => {  
+            console[method] = function() {};  
+        });  
+    })();  
+  
+    // Basic anti-debugger  
+    setInterval(() => {  
+        const before = new Date();  
+        debugger;  
+        const after = new Date();  
+        if (after - before > 100) {  
+            window.location.href = "about:blank"; // Or another action  
+        }  
+    }, 1000);  
+</script>  </body>  
+</html>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>  
+    <script>  
+        // GSAP animations for marquee  
+        // This script block targets '.marquee-content' which is not part of the breaking news section  
+        // but rather the general news ticker. It's left as is per instructions not to remove anything.  
+        gsap.fromTo('.marquee-content', { x: '100%' }, {  
+            x: '-100%',  
+            duration: 15,  
+            ease: 'linear',  
+            repeat: -1,  
+            paused: true,  
+            onStart: function() {  
+                document.querySelectorAll('.marquee-content').forEach(el => el.style.animationPlayState = 'running');  
+            }  
+        });  
+    </script>  و بعد الانتهاء ارسلي الكود كامل
